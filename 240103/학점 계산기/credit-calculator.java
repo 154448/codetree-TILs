@@ -6,15 +6,21 @@ public class Main {
         Scanner userIn = new Scanner(System.in);
 
         int n = userIn.nextInt();
-        double[] score = double[n];
+        double[] score = new double[n];
 
         double tot = 0;
+
+        for(int i = 0; i < n; i++){
+            score[i] = userIn.nextDouble();
+        }
 
         for(int i = 0; i < n; i++){
             tot += score[i];
         }
 
         double avg = tot / n;
+
+        System.out.printf("%.1f \n",avg);
 
         if(avg > 4.0){
             System.out.print("Perfect");
