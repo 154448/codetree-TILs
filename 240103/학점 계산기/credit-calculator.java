@@ -22,10 +22,10 @@ public class Main {
 
         System.out.printf("%.1f \n",avg);
 
-        if(avg > 4.0){
+        if(avg >= 4.0){
             System.out.print("Perfect");
         }
-        else if(avg > 3.0){
+        else if(avg >= 3.0){
             System.out.print("Good");
         }
         else{
