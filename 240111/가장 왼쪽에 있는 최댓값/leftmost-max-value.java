@@ -14,7 +14,7 @@ public class Main {
 
         int idx = n - 1;;
 
-        while(idx > 0){
+        while(idx >= 0){
             int maxValue = num[0];
             int maxIdx = 0;
 
