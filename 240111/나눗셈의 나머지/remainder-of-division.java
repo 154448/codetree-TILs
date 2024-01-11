@@ -12,7 +12,7 @@ public class Main {
         int[] count = new int[b];
         Arrays.fill(count, 0);
 
-        while(a > 0){
+        while(a > 1){
             count[a % b] += 1;
             a /= b;
         }
