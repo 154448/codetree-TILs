@@ -23,6 +23,6 @@ public class Main {
             tot += (count[i] * count[i]);
         }
 
-        System.out.printf("%d ", tot);
+        System.out.printf("%d", tot);
     }
 }
