@@ -20,8 +20,8 @@ public class Main {
                 else{
                     nums[j][i] = ++num;
                 }
-                cnt += 1;
             }
+            cnt += 1;
         }
 
         for(int i = 0; i < n; i++){
