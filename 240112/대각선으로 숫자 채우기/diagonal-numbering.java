@@ -14,14 +14,21 @@ public class Main {
         for(int i = 0; i < m; i++){
             int c = i;
             for(int j = 0; j < n; j++){
+                if(c < 0){
+                    break;
+                }
                 nums[j][c--] = ++num;
             }
         }
 
 
+
         for(int i = 1; i < n; i++){
             int c = m - 1;
             for(int j = i; j < n; j++){
+                if(c < 0){
+                    break;
+                }
                 nums[j][c--] = ++num;
             }
         }
