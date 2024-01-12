@@ -10,15 +10,17 @@ public class Main {
         int[][] nums = new int[n][n];
 
         int num = 0;
+        int cnt = 0;
 
         for(int i = n - 1; i >= 0; i--){
             for(int j = 0; j < n; j++){
-                if(i % 2 == 1){
+                if(cnt % 2 == 0){
                     nums[n - 1 - j][i] = ++num;
                 }
                 else{
                     nums[j][i] = ++num;
                 }
+                cnt += 1;
             }
         }
 
