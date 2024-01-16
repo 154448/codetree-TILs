@@ -12,7 +12,12 @@ public class Main {
         for(int i = 1; i <= n; i++){
             int idx = str.length() - i;
 
-            System.out.printf("%c", str.charAt(idx));
+            if(idx >= 0){
+                System.out.printf("%c", str.charAt(idx));
+            }
+            else{
+                break;
+            }
         }
     }
 }
