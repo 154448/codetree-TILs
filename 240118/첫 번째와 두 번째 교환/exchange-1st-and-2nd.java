@@ -12,7 +12,15 @@ public class Main {
         newStr += str.charAt(0);
 
         for(int i = 2; i < str.length(); i++){
-            newStr += str.charAt(i) == newStr.charAt(1) ? newStr.charAt(0) : str.charAt(i);
+            char current = str.charAt(i);
+
+            if(current == newStr.charAt(0)){
+                current = newStr.charAt(1);
+            }
+            else if(current == newStr.charAt(1)){
+                current = newStr.charAt(0);
+            }
+            newStr += current;
         }
 
         System.out.printf("%s", newStr);
