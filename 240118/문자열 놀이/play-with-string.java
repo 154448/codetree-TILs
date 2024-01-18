@@ -14,7 +14,7 @@ public class Main {
             String newStr = "";
 
             if(q == 1){
-                int a = = userIn.nextInt() - 1;
+                int a = userIn.nextInt() - 1;
                 int b = userIn.nextInt() - 1;
                 
                 int first = a > b ? b : a;
