@@ -19,9 +19,8 @@ public class Main {
                 newStr += str.charAt(str.length() - 1)+ str.substring(0, str.length() - 1);
             }
             else if(q == 3){
-                for(int j = str.length() - 1; j >= 0; j--){
-                    newStr += str.charAt(j);
-                }
+                    StringBuffer sb = new StringBuffer(str);
+                    newStr = sb.reverse().toString();
             }
             System.out.printf("%s\n", newStr);
 
