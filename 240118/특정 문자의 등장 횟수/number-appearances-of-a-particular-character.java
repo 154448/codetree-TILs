@@ -36,7 +36,7 @@ public class Main {
                 }
             }
             else{
-                idx2 = 0;
+                idx2 = tmp == 'e'? 1 : 0;
             }
         }
 
