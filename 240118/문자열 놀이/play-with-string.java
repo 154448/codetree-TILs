@@ -14,8 +14,11 @@ public class Main {
             String newStr = "";
 
             if(q == 1){
-                int first = userIn.nextInt() - 1;
-                int last = userIn.nextInt() - 1;
+                int a = = userIn.nextInt() - 1;
+                int b = userIn.nextInt() - 1;
+                
+                int first = a > b ? b : a;
+                int last = a < b ? b : a;
 
                 newStr += s.substring(0, first);
                 newStr += s.charAt(last);
