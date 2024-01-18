@@ -23,6 +23,9 @@ public class Main {
                     i = -1;
                 }
             }
+            else{
+                idx = current == b.charAt(0) ? 1 : 0;
+            }
             i += 1;
         }
 
