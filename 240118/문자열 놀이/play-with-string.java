@@ -24,8 +24,9 @@ public class Main {
                 newStr += s.charAt(last);
                 newStr += s.substring(first + 1, last);
                 newStr += s.charAt(first);
-                newStr += s.charAt(last + 1);
+                newStr += s.substring(last + 1);
             }
+
             else if(q == 2){
                 char key = userIn.next().charAt(0);
                 char value = userIn.next().charAt(0);
