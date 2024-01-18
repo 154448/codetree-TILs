@@ -21,8 +21,11 @@ public class Main {
                 idx1 += 1;
                 if(idx1 == 2){
                     cnt1 += 1;
-                    idx1 = 0;
+                    idx1 = 1;
                 }
+            }
+            else{
+                idx1 = 0;
             }
 
             if(tmp == target2.charAt(idx2)){
@@ -31,6 +34,9 @@ public class Main {
                     cnt2 += 1;
                     idx2 = 0;
                 }
+            }
+            else{
+                idx2 = 0;
             }
         }
 
