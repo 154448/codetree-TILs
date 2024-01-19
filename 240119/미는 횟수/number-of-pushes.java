@@ -16,6 +16,11 @@ public class Main {
         int cntL = 0;
 
         while(true){
+            if(cntR == start.length()){
+                System.out.printf("%d", -1);
+                break;   
+            }
+
             cntR += 1;
             right = right.charAt(right.length() - 1) + right.substring(0, right.length() - 1);
 
@@ -29,11 +34,6 @@ public class Main {
             else if(left.equals(answer)){
                 System.out.printf("%d", cntL);
                 break;
-            }
-
-            if(cntR == start.length()){
-                System.out.printf("%d", -1);
-                break;   
             }
         }
 
