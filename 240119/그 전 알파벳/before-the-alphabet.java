@@ -9,7 +9,7 @@ public class Main {
 
         int n = (int)c - 1;
 
-        n = n < 65 ? n + 26 : n;
+        n = n < 97 ? n + 26 : n;
 
         System.out.printf("%c", (char)n);
     }
