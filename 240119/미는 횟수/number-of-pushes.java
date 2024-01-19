@@ -30,6 +30,11 @@ public class Main {
                 System.out.printf("%d", cntL);
                 break;
             }
+
+            if(cntR == start.length()){
+                System.out.printf("%d", -1);
+                break;   
+            }
         }
 
         
