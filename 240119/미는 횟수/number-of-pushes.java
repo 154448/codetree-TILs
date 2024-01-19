@@ -6,19 +6,32 @@ public class Main {
         Scanner userIn = new Scanner(System.in);
 
         String start = userIn.next();
+        
+        String right = start;
+        String left = start;
+        
         String answer = userIn.next();
 
-        int cnt = 0;
+        int cntR = 0;
+        int cntL = 0;
 
         while(true){
-            cnt += 1;
-            start = start.substring(1) + start.charAt(0);
+            cntR += 1;
+            right = right.charAt(right.length() - 1) + right.substring(0, right.length() - 1);
 
-            if(start.equals(answer)){
+            cntL -= 1;
+            left = left.substring(1) + left.charAt(0);
+
+            if(right.equals(answer)){
+                System.out.printf("%d", cntR);
+                break;
+            }
+            else if(left.equals(answer)){
+                System.out.printf("%d", cntL);
                 break;
             }
         }
 
-        System.out.printf("%d", cnt);
+        
     }
 }
