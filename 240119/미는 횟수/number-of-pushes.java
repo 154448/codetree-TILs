@@ -13,7 +13,6 @@ public class Main {
         String answer = userIn.next();
 
         int cntR = 0;
-        int cntL = 0;
 
         int res = 0;
 
@@ -26,19 +25,12 @@ public class Main {
             cntR += 1;
             right = right.charAt(right.length() - 1) + right.substring(0, right.length() - 1);
 
-            cntL += 1;
-            left = left.substring(1) + left.charAt(0);
-
             if(right.equals(answer)){
                 res = cntR;
                 break;
             }
-            else if(left.equals(answer)){
-                res = cntL;
-                break;
-            }
         }
-
         
+        System.out.printf("%d", res);
     }
 }
