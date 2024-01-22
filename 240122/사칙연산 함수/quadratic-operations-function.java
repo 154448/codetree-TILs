@@ -14,7 +14,7 @@ public class Main {
             res = a * b;
         }
         else if(o == '/'){
-            res = a - b;
+            res = a / b;
         }
 
         else{
