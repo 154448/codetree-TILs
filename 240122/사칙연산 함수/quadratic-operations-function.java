@@ -34,13 +34,11 @@ public class Main {
 
         int res = calculate(a, b, o);
 
-        System.out.printf("%d %c %d = ", a, o, b);
-
-
         if(res == 400){
             System.out.printf("%s", "False");
         }
         else{
+            System.out.printf("%d %c %d = ", a, o, b);
             System.out.printf("%d", res);
         }
 
