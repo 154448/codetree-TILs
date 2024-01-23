@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static boolean isLeafYear(int y){
         boolean res = false;
-        
         //4의 배수인 경우
         if(y % 4 == 0){
             if(y % 100 == 0){
+                //100의 배수인 경우 false but 400의 배수인 경우 true
                 res = (y % 400 == 0) ? true : false;
             }
             else{
@@ -21,18 +21,13 @@ public class Main {
     public static boolean isDate(int y, int m, int d){
         boolean res = false;
 
-        if(m % 8 == 0){
+        if(m / 8 == 0){
             if(m % 2 == 1){
                 res = d <= 31 ? true : false;
             }
             else{
-                if(m == 2){
-                    int feb = isLeafYear(y)? 29 : 28;
-                    res = d <= feb ? true : false;
-                }
-                else{
-                    res = d <= 30 ? true : false;
-                }
+                int key = (m == 2)? (isLeafYear(y)? 29 : 28) : 30;
+                res = d <= key ? true : false;
             }
         }
         else{
@@ -48,7 +43,7 @@ public class Main {
 
     }
     public static String judgeSeason(int y, int m, int d){
-        String res = "-1";
+        String res = "";
 
         if(isDate(y, m, d)){
             if(m >= 3 && m <= 5){
@@ -65,11 +60,13 @@ public class Main {
             }
 
         }
+        else{
+            res = "-1";
+        }
 
         return res;
     }
     public static void main(String[] args) {
-        // 여기에 코드를 작성해주세요.
         Scanner userIn = new Scanner(System.in);
 
         int y = userIn.nextInt();
