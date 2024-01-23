@@ -5,26 +5,29 @@ public class Main {
         String res = "No";
 
         if(m >= 1 && m <= 12){
-            if(m % 2 == 1){
-                //31일인 경우
-                res = d <= 31 ? "Yes" : "No";
+            if(m / 8 == 0){
+                if(m % 2 == 1){
+                    //31일인 경우
+                    res = d <= 31 ? "Yes" : "No";
+                }
+                else{
+                    if(m == 2){
+                        res = d <= 28 ? "Yes" : "No";
+                    }
+                    else{
+                        res = d <=30 ? "Yes" : "No";
+                    }
+                }
             }
             else{
-                if(m == 2){
-                    res = d <= 28 ? "Yes" : "No";
+                if(m % 2 == 0){
+                //31일인 경우
+                res = d <= 31 ? "Yes" : "No";
                 }
                 else{
                     res = d <=30 ? "Yes" : "No";
                 }
-            }
-        }
-        else{
-            if(m % 2 == 0){
-                //31일인 경우
-                res = d <= 31 ? "Yes" : "No";
-            }
-            else{
-                res = d <=30 ? "Yes" : "No";
+
             }
         }
 
