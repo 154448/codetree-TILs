@@ -16,7 +16,7 @@ public class Main {
                 idx += 1;
                 
                 if(idx == key.length()){
-                    res = 7 - idx + 1;
+                    res = i - idx + 1;
                     break;
                 }
             }
