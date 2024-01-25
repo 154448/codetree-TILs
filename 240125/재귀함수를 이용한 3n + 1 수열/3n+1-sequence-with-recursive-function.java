@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static int toOne(int n){
+        if(n == 1){
+            return 0;
+        }
         int current = (n % 2 == 0)? n / 2 : 3 * n + 1;
 
         if(current == 1){
