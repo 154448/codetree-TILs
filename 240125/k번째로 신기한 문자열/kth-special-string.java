@@ -19,7 +19,7 @@ public class Main {
         for(int i = 0; i < n; i++){
             nums[i] = userIn.next();
 
-            if(nums[i].contains(t)){
+            if(nums[i].indexOf(t) == 0){
                 cnt += 1;
             }
         }
@@ -28,7 +28,7 @@ public class Main {
         cnt = 0;
 
         for(int i = 0 ; i < n; i++){
-            if(nums[i].contains(t)){
+            if(nums[i].indexOf(t) == 0){
                 targets[cnt++] = nums[i];
             }
         }
