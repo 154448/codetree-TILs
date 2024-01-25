@@ -9,10 +9,10 @@ public class Main {
         int n = userIn.nextInt();
         int k = userIn.nextInt();
 
-        String[] words = new String[n];
+        int[] words = new int[n];
 
         for(int i = 0; i < n; i++){
-            words[i] = userIn.next();
+            words[i] = userIn.nextInt();
         }
 
         Arrays.sort(words);
