@@ -9,7 +9,7 @@ public class Main {
         int n = userIn.nextInt();
 
         int[] nums = new int[n];
-        Arrays.fill(nums, 100);
+        Arrays.fill(nums, 101);
 
         for(int i = 0; i < n; i++){
             nums[i] = userIn.nextInt();
@@ -17,7 +17,6 @@ public class Main {
                 Arrays.sort(nums);
                 System.out.printf("%d ", nums[(i + 1)/ 2]);
             }
-            
 
         }
     }
