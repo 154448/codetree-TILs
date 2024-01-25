@@ -15,7 +15,7 @@ public class Main {
             nums[i] = userIn.nextInt();
             if(i % 2 == 0){
                 Arrays.sort(nums);
-                System.out.printf("%d ", nums[i / 2]);
+                System.out.printf("%d ", nums[(i + 1)/ 2]);
             }
             
 
