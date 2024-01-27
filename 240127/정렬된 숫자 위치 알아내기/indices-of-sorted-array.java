@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 class Num implements Comparable<Num>{
     int value;
@@ -30,33 +31,15 @@ public class Main {
         int n = userIn.nextInt();
 
         Num[] nums = new Num[n];
-        int[] transferIdx = new int[n];
 
         for(int i = 0; i < n; i++){
             nums[i] = new Num(userIn.nextInt(), i);
         }
 
-        for(int i = 0; i < n; i++){
-            //최대값 찾기 시작
-            int maxValue = 0;
-            int idx = -1;
-
-            for(int j = 0; j < n - i; j++){
-                if(maxValue < nums[j].value){
-                    maxValue = nums[j].value;
-                    idx = j;
-                }
-            }
-
-            Num tmp = nums[n - i - 1];
-            nums[n - i - 1] = nums[idx];
-            nums[idx] = tmp;
-
-            transferIdx[nums[n - i - 1].getFirstIdx()] = n - i;
-        }
+        Arrays.sort(nums);
 
         for(int i = 0; i < n; i++){
-            System.out.printf("%d ", transferIdx[i]);
+            System.out.printf("%d ", nums[i].getFirstIdx() + 1);
         }
     }
 }
