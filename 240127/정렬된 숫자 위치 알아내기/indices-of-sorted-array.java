@@ -31,15 +31,20 @@ public class Main {
         int n = userIn.nextInt();
 
         Num[] nums = new Num[n];
+        int[] transferIdx = new int[n];
 
         for(int i = 0; i < n; i++){
-            nums[i] = new Num(userIn.nextInt(), i);
+            nums[i] = new Num(userIn.nextInt(), i + 1);
         }
 
         Arrays.sort(nums);
 
         for(int i = 0; i < n; i++){
-            System.out.printf("%d ", nums[i].getFirstIdx() + 1);
+            transferIdx[nums[i].getFirstIdx() - 1] = i + 1;
+        }
+
+        for(int i = 0; i < n; i++){
+            System.out.printf("%d ", transferIdx[i]);
         }
     }
 }
