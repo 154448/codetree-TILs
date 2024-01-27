@@ -51,17 +51,18 @@ public class Main {
             String tmp = userIn.nextLine();
             String[] info = tmp.split(" ");
 
+            info[0] = info[2].equals("Rain") ? info[0] : "9999-99-99";
+
             //System.out.printf("%s\n", info[1]);
             forecasts[i] = new Forecast(info[0], info[1], info[2]);
         }
 
         Arrays.sort(forecasts);
 
-        for(int i = 0; i < n; i++){
-            if(forecasts[i].weather.equals("Rain")){
-                System.out.printf("%s %s %s", forecasts[i].getDate(), forecasts[i].week, forecasts[i].weather);
-                break;
-            }
-        }
+        //for(int i = 0; i < n; i++){
+        //    System.out.printf("%s\n", forecasts[i].getDate());
+        //}
+
+        System.out.printf("%s %s %s", forecasts[0].getDate(), forecasts[0].week, forecasts[0].weather);
     }
 }
