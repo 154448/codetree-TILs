@@ -16,23 +16,21 @@ public class Main {
             char direction = userIn.next().charAt(0);
 
             if(direction == 'L'){
-                current = current - x;
+                current -= x;
             }
 
             for(int j = 0; j < x; j++){
-                intervals[current++] += 1;
+                intervals[current + j] += 1;
             }
 
-            if(direction == 'L'){
-                current = current - x + 1;
-            }
+            current = direction == 'L' ? current : current + x;  
         }
 
         int cnt = 0;
 
 
         for(int i = 0; i < 2001; i++){
-            cnt = intervals[i] > 1 ? cnt + 1 : cnt;
+            cnt = intervals[i] >= 2 ? cnt + 1 : cnt;
         }
 
         System.out.printf("%d", cnt);
