@@ -23,7 +23,7 @@ public class Main {
             int color = d == 'L' ? -1 : 1;
 
             if(d == 'L'){
-                idx -= x;
+                idx -= (x - 1);
             }
 
             for(int i = idx; i < idx + x; i++ ){
@@ -50,7 +50,7 @@ public class Main {
                 }
             }
 
-            idx = (d == 'L') ? idx : idx + x;
+            idx = (d == 'L') ? idx : idx + x - 1;
         }
 
         int cntBlack = 0;
