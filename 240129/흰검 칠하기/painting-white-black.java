@@ -6,7 +6,8 @@ public class Main {
         Scanner userIn = new Scanner(System.in);
 
         int[] current = new int[2000001];
-        int[][] cnt = new int[2000001][2];
+        int[] cntW = new int[2000001];
+        int[] cntB = new int[2000001];
 
         int idx = 100000;
 
@@ -34,14 +35,14 @@ public class Main {
                 else{
                     if(color == 1){
                         //검은색인 경우
-                        cnt[i][0] += 1;
+                        cntB[i] += 1;
                     }
                     else{
                         //흰색인 경우
-                        cnt[i][1] += 1;
+                        cntW[i] += 1;
                     }
                     
-                    if(cnt[i][0] >= 2 && cnt[i][1] >= 2){
+                    if(cntW[i] >= 2 && cntB[i] >= 2){
                         current[i] = 2;
                     }
                     else{
