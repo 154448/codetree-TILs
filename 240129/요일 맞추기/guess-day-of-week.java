@@ -36,6 +36,21 @@ public class Main {
         int m2 = userIn.nextInt();
         int d2 = userIn.nextInt();
 
+        boolean isSmall = false;
+
+        if((m1*100 + d1) > (m2 * 100 + d2)){
+            int tM = m1;
+            int tD = d1;
+
+            m1 = m2;
+            d1 = d2;
+
+            m2 = tM;
+            d2 = tD;
+
+            isSmall = true;
+        }
+
         int totDay = 0;
 
         for(int m = m1; m < m2; m++){
@@ -44,11 +59,7 @@ public class Main {
 
         totDay += (d2 - d1);
 
-        int res = totDay % 7;
-
-        if(totDay < 0){
-            res += 7;
-        }
+        int res = isSmall ? 7 - (totDay % 7): totDay % 7;
 
         System.out.printf("%s", days[res]);
     }
