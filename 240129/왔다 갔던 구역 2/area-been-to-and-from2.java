@@ -15,10 +15,16 @@ public class Main {
             int x = userIn.nextInt();
             char direction = userIn.next().charAt(0);
 
+            if(direction == 'L'){
+                current = current - x;
+            }
+
             for(int j = 0; j < x; j++){
-                intervals[current] += 1;
-                
-                current = (direction == 'R')? current + 1 : current - 1;
+                intervals[current++] += 1;
+            }
+
+            if(direction == 'L'){
+                current = current - x + 1;
             }
         }
 
