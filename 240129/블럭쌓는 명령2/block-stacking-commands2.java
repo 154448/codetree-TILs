@@ -13,8 +13,8 @@ public class Main {
         int maxValue = 0;
 
         for(int i = 0; i < k; i++){
-            int start = userIn.nextInt();
-            int end = userIn.nextInt();
+            int start = userIn.nextInt() - 1;
+            int end = userIn.nextInt() - 1;
 
             for(int j = start; j <= end; j++){
                 blocks[j] += 1;
