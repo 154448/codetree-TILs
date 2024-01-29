@@ -37,12 +37,11 @@ public class Main {
 
         int totDay = 0;
 
-        for(int m = m1 + 1; m < m2; m++){
+        for(int m = m1; m < m2; m++){
             totDay += getTotalDay(m);
         }
 
-        totDay += (getTotalDay(m1) - d1 + 1);
-        totDay += d2;
+        totDay += (d2 - d1 + 1);
 
         System.out.printf("%d", totDay);
     }
