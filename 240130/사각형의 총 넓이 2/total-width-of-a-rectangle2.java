@@ -11,7 +11,7 @@ public class Main {
 
         int tot = 0;
 
-        for(int j = 0; j < 2; j++){
+        for(int j = 0; j < n; j++){
             int x1 = userIn.nextInt() + 100;
             int y1 = userIn.nextInt() + 100;
             int x2 = userIn.nextInt() + 100;
@@ -19,15 +19,11 @@ public class Main {
 
             for(int x = x1; x < x2; x++){
                 for(int y = y1; y < y2; y++){
-                    point[x][y] = 1;
-                    
+                    if(point[x][y] != 1){
+                        point[x][y] = 1; 
+                        tot += 1;
+                    }
                 }
-            }
-        }
-
-        for(int i = 0; i < 201; i++){
-            for(int j = 0; j < 201; j++){
-                tot += point[i][j];
             }
         }
 
