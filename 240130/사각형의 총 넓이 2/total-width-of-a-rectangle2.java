@@ -19,12 +19,15 @@ public class Main {
 
             for(int x = x1; x < x2; x++){
                 for(int y = y1; y < y2; y++){
-                    if(point[x][y] != 1){
-                        point[x][y] = 1;
-                        tot += 1;
-                    }
+                    point[x][y] = 1;
                     
                 }
+            }
+        }
+
+        for(int i = 0; i < 201; i++){
+            for(int j = 0; j < 201; j++){
+                tot += point[i][j];
             }
         }
 
