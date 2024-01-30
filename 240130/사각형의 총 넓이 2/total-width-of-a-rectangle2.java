@@ -12,10 +12,10 @@ public class Main {
         int tot = 0;
 
         for(int j = 0; j < 2; j++){
-            int x1 = userIn.nextInt();
-            int y1 = userIn.nextInt();
-            int x2 = userIn.nextInt();
-            int y2 = userIn.nextInt();
+            int x1 = userIn.nextInt() + 100;
+            int y1 = userIn.nextInt() + 100;
+            int x2 = userIn.nextInt() + 100;
+            int y2 = userIn.nextInt() + 100;
 
             for(int x = x1; x < x2; x++){
                 for(int y = y1; y < y2; y++){
