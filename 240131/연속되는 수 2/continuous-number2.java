@@ -21,6 +21,9 @@ public class Main {
         for(int i = 1; i < n; i++){
             if(num[i] == value){
                 cnt += 1;
+                if(i == n - 1){
+                    count[value] = cnt;
+                }
             }
             else{
                 if(cnt > count[value]){
