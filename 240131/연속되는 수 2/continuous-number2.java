@@ -16,6 +16,7 @@ public class Main {
 
         int cnt = 1;
         int value = num[0];
+        count[num[0]] = 1;
 
         for(int i = 1; i < n; i++){
             if(num[i] == value){
