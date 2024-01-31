@@ -10,12 +10,11 @@ public class Main {
         int[] nums = new int[n];
 
         nums[0] = userIn.nextInt();
-        nums[1] = userIn.nextInt();
 
         int cnt = 1;
         // 0 : Increase , 1 : decrease
 
-        for(int i = 2; i < n; i++){
+        for(int i = 1; i < n; i++){
             nums[i] = userIn.nextInt();
 
             if(nums[i - 1] < nums[i]){
