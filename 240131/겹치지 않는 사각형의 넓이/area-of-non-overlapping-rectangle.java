@@ -16,10 +16,10 @@ public class Main {
         int tot = 0;
 
         for(int k = 0; k < 2; k++){
-            int x1 = userIn.nextInt();
-            int y1 = userIn.nextInt();
-            int x2 = userIn.nextInt();
-            int y2 = userIn.nextInt();
+            int x1 = userIn.nextInt() + 1000;
+            int y1 = userIn.nextInt() + 1000;
+            int x2 = userIn.nextInt() + 1000;
+            int y2 = userIn.nextInt() + 1000;
 
             for(int x = x1; x < x2; x++){
                 for(int y = y1; y < y2; y++){
@@ -31,10 +31,10 @@ public class Main {
             }
         }
 
-        int x1 = userIn.nextInt();
-        int y1 = userIn.nextInt();
-        int x2 = userIn.nextInt();
-        int y2 = userIn.nextInt();
+        int x1 = userIn.nextInt() + 1000;
+        int y1 = userIn.nextInt() + 1000;
+        int x2 = userIn.nextInt() + 1000;
+        int y2 = userIn.nextInt() + 1000;
 
         for(int x = x1; x < x2; x++){
             for(int y = y1; y < y2; y++){
