@@ -8,8 +8,8 @@ public class Main {
         int n = userIn.nextInt();
         int m = userIn.nextInt();
 
-        int[] locA = new int[1000000];
-        int[] locB = new int[1000000];
+        int[] locA = new int[1000001];
+        int[] locB = new int[1000001];
 
         int tA = 0;
         int tB = 0;
