@@ -47,9 +47,12 @@ public class Main {
         int minY = 2001;
         int maxY = 0;
 
+        boolean isExit = false;
+
         for(int x = firstCoordinate[0]; x < firstCoordinate[2]; x++){
             for(int y = firstCoordinate[1]; y < firstCoordinate[3]; y++){
                 if(plane[x][y] == 1){
+                    isExit = true;
                     minX = minX > x ? x : minX;
                     maxX = maxX < x ? x : maxX;
                     minY = minY > y ? y : minY;
@@ -61,6 +64,6 @@ public class Main {
         //System.out.printf("%d %d %d %d \n", maxX, minX, maxY ,minY);
 
 
-        System.out.printf("%d", (maxX - minX + 1) * (maxY - minY + 1));
+        System.out.printf("%d", isExit ? (maxX - minX + 1) * (maxY - minY + 1) : 0);
     }
 }
