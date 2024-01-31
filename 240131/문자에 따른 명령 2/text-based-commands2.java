@@ -17,10 +17,10 @@ public class Main {
             char c = command.charAt(i);
 
             if(c == 'L'){
-                direction = -1;
+                direction += -1;
             }
             else if(c == 'R'){
-                direction = 1;
+                direction += 1;
             }
             else{
                 int d = direction % 4;
