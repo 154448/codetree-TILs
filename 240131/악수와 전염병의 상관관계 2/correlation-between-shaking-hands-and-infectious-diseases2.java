@@ -54,18 +54,13 @@ public class Main {
 
         int cnt = 1;
 
-        for(int i = 0; i < t; i++){
+        for(int i = 0; i < k; i++){
             int x = information[i].getX();
             int y = information[i].getY();
 
 
             if(state[x] == 1 || state[y] == 1){
-                if(cnt > k){
-                    break;
-                }
-                else{
-                    cnt += 1;
-                }
+                
                 state[x] = 1;
                 state[y] = 1;
             }
