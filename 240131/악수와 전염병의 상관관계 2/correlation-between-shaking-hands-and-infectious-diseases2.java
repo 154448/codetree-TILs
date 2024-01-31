@@ -39,8 +39,10 @@ public class Main {
 
         Info[] information = new Info[t];
 
-        int[] state = new int[n];
-        state[p] = 1;
+        int[][] state = new int[n][2];
+        state[p - 1][0] = 1;
+        state[p - 1][1] = 0;
+
 
         for(int i = 0; i < t; i++){
             int s = userIn.nextInt();
@@ -52,22 +54,27 @@ public class Main {
 
         Arrays.sort(information);
 
-        int cnt = 1;
+        int cnt = 0;
 
-        for(int i = 0; i < k; i++){
+        for(int i = 0; i < t; i++){
             int x = information[i].getX();
             int y = information[i].getY();
 
 
-            if(state[x] == 1 || state[y] == 1){
-                
-                state[x] = 1;
-                state[y] = 1;
+            if(state[x][0] == 1 && state[x][1] < k){
+                state[x][1] += 1;
+                state[y][1] = state[y][0] == 0 ? 0 : state[y][1] + 1;
+                state[y][0] = 1;
+            }
+            else if(state[y][0] == 1 && state[y][1] < k){
+                state[y][1] += 1;
+                state[x][1] = state[x][0] == 0 ? 0 : state[x][1] + 1;
+                state[x][0] = 1;
             }
         }
 
         for(int i = 0; i < n; i++){
-            System.out.printf("%d", state[i]);
+            System.out.printf("%d", state[i][0]);
         }
     }
 }
