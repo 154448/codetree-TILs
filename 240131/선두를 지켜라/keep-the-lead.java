@@ -53,7 +53,7 @@ public class Main {
             }
         }
 
-        System.out.printf("%d", cnt);
+        System.out.printf("%d", cnt == -1 ? 0 : cnt);
 
         
     }
