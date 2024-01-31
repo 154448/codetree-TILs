@@ -18,9 +18,8 @@ public class Main {
             int v = userIn.nextInt();
             int t = userIn.nextInt();
 
-            for(int i = 0; i < c; i++){
-                locA[tA + 1] = locA[tA] + v;
-                tA += 1;
+            for(int i = 0; i < t; i++){
+                locA[++tA] = locA[tA - 1] + v;
             }
         }
 
@@ -29,23 +28,27 @@ public class Main {
             int t = userIn.nextInt();
 
             for(int i = 0; i < t; i++){
-                locB[tB + 1] = locB[tB] + v;
-                tB += 1;
+                locB[++tB] = locB[tB - 1] + v;
             }
         }
 
-        int cnt = 0;
+        int cnt = -1;
         char current = 's';
 
-        for(int i = 0; i < tA; i++){
+        for(int i = 0; i <= tA; i++){
+            //우위 찾기
             char res = locA[i] > locB[i] ? 'A' : 'B';
+            //System.out.printf("%d %d\n", locA[i], locB[i]);
+            //같으면 우위 없음
             if (locA[i] == locB[i]){
                 current = 's';
                 continue;
             }
-
+            //우위 발생, 전의 선두와 비교
             if(current != res){
+                //우위 업데이트
                 current = res;
+                //변경
                 cnt += 1;
             }
         }
