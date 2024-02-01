@@ -33,6 +33,7 @@ public class Main {
 
         int c = 0;
 
+        MainLoop:
         do{
             c += 1;
             char direction = userIn.next().charAt(0);
@@ -47,12 +48,8 @@ public class Main {
 
                 if(x == 0 && y == 0){
                     res = t;
-                    break;
+                    break MainLoop;
                 }
-            }
-            if(x == 0 && y == 0){
-                res = t;
-                break;
             }
         }while(c < n);
 
