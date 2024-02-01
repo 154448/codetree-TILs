@@ -24,6 +24,7 @@ public class Main {
             if(direction == 'L' || direction == 'R'){
                 d = direction == 'L' ? (d - 1): (d + 1);
                 d %= 4;
+                d = d < 0 ? d + 4 : d; 
             }
             else{
                 x += dx[d];
