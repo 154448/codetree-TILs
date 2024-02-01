@@ -50,6 +50,10 @@ public class Main {
                     break;
                 }
             }
+            if(x == 0 && y == 0){
+                res = t;
+                break;
+            }
         }while(c < n);
 
         System.out.printf("%d", res);
