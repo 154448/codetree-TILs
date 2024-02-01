@@ -9,6 +9,7 @@ public class Main {
         else if(d == 'D'){
             res = 2;
         }
+
         else if(d == 'R'){
             res = 1;
         }
@@ -28,8 +29,8 @@ public class Main {
         int n = userIn.nextInt();
         int t = userIn.nextInt();
 
-        int x = userIn.nextInt() - 1;
-        int y = userIn.nextInt() - 1;
+        int x = userIn.nextInt();
+        int y = userIn.nextInt();
 
         char d = userIn.next().charAt(0);
 
@@ -39,7 +40,7 @@ public class Main {
             x += dx[direction];
             y += dy[direction];
 
-            if(x >= n || y >= n || x < 0 || y <0){
+            if(x > n || y > n || x < 1 || y <1){
                 x -= dx[direction];
                 y -= dy[direction];
 
@@ -47,7 +48,7 @@ public class Main {
             }
         }
 
-        System.out.printf("%d %d", y, x);
+        System.out.printf("%d %d", y + 1, x + 1);
 
 
     }
