@@ -22,33 +22,34 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner userIn = new Scanner(System.in);
-
-        int[] dx = {0, 1, 0, -1};
-        int[] dy = {1, 0, -1, 0};
+        //U, R, D, L
+        int[] dr = {-1, 0, 1, 0};
+        int[] dc = {0, 1, 0, -1};
 
         int n = userIn.nextInt();
         int t = userIn.nextInt();
 
-        int x = userIn.nextInt();
-        int y = userIn.nextInt();
+        int r = userIn.nextInt();
+        int c = userIn.nextInt();
 
         char d = userIn.next().charAt(0);
 
         int direction = getDirection(d);
 
         for(int i = 0; i < t; i++){
-            x += dx[direction];
-            y += dy[direction];
+            r += dr[direction];
+            c += dc[direction];
 
-            if(x > n || y > n || x < 1 || y <1){
-                x -= dx[direction];
-                y -= dy[direction];
+            //벽을 만난 경우
+            if(r > n || c > n || r < 1 || c <1){
+                r -= dr[direction];
+                c -= dc[direction];
 
                 direction = (direction + 2) % 4;
             }
         }
 
-        System.out.printf("%d %d", y + 1, x + 1);
+        System.out.printf("%d %d", r, c);
 
 
     }
