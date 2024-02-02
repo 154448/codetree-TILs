@@ -16,7 +16,7 @@ public class Main {
             tot += tmp;
         }
 
-        int minDist = 1000000;
+        int minDist = 100000000;
 
         for(int i = 0; i < n; i++){
             int moveDist = 0;
