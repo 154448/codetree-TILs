@@ -48,6 +48,7 @@ public class Main {
             else{
                 d += (o == 'L' ? -1 : 1);
 
+                d %= 4;
 
                 d = d < 0 ? d + 4 : d;
             }
