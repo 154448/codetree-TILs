@@ -30,7 +30,7 @@ public class Main {
                             if(block[x][y] == color){
                                 for(int a = x + 1; a < r; a++){
                                     for(int b = y + 1; b < c; b++){
-                                        if(block[a][b] != color){
+                                        if(block[a][b] != color && a == r - 1 && b == c -1){
                                             cnt += 1;
                                         }
 
