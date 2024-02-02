@@ -23,10 +23,9 @@ public class Main {
 
         int minDist = dist;
 
-        for(int i = 1; i < n - 2; i++){
+        for(int i = 1; i < n - 1; i++){
             int tmpDist = dist - (Math.abs(x[i] - x[i - 1]) + Math.abs(y[i] - y[i - 1]));
             tmpDist -= (Math.abs(x[i + 1] - x[i]) + Math.abs(y[i + 1] - y[i]));
-
             tmpDist += (Math.abs(x[i + 1] - x[i - 1]) + Math.abs(y[i + 1] - y[i - 1]));
 
             minDist = Math.min(minDist, tmpDist);
