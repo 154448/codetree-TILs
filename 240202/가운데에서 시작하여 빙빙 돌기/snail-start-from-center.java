@@ -27,7 +27,7 @@ public class Main {
             int tR = r + dr[tmp];
             int tC = c +dc[tmp];
 
-            if(nums[tR][tC] == 0 ){
+            if(tR >= 0 && tR <= n - 1 && tC >= 0 && tC <= n-1 && nums[tR][tC] == 0 ){
                 r = tR;
                 c = tC;
 
