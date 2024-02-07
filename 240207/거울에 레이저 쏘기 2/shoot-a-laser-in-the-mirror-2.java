@@ -71,8 +71,13 @@ public class Main {
         int cnt = -1;
 
         do{
-            r += dr[direction];
-            c += dc[direction];
+            try{
+                r += dr[direction];
+                c += dc[direction];
+            }
+            catch(ArrayIndexOutOfBoundsException e){
+                System.out.printf("%d", direction);
+            }
             
             cnt += 1;
             
