@@ -8,7 +8,7 @@ public class Main {
             res = (d % 2 == 0) ? (d + 2) % 4 + 1 : (d + 2) % 4  - 1;
         }
         else{
-            res = (d % 2 == 0) ? (d + 2) % 4 - 1 : (d + 2) % 4 + 1;
+            res = (d % 2 == 0) ? (d + 2) % 4 - 1 : ((d + 2) % 4 + 1) % 4;
         }
 
         return res < 0 ? res + 4 : res;
@@ -68,7 +68,7 @@ public class Main {
         int r = getStartPointR(startPoint, direction, n);
         int c = getStartPointC(startPoint, direction, n);
 
-        int cnt = -1;
+        int cnt = 0;
 
         do{
             try{
@@ -78,11 +78,12 @@ public class Main {
             catch(ArrayIndexOutOfBoundsException e){
                 System.out.printf("%d", direction);
             }
-            
-            cnt += 1;
+
+            //System.out.printf("%d %d\n", r, c);
             
             if(r >= 0 && r < n && c >= 0 && c < n){
                 direction = getDirection(plane[r][c], direction); 
+                cnt += 1;
             }
             else{
                 break;
