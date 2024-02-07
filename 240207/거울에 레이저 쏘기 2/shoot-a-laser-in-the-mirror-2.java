@@ -71,6 +71,7 @@ public class Main {
         int cnt = -1;
 
         do{
+            System.out.printf("%d %d\n", direction);
             r += dr[direction];
             c += dc[direction];
             
