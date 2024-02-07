@@ -11,7 +11,7 @@ public class Main {
             res = (d % 2 == 0) ? (d + 2) % 4 - 1 : (d + 2) % 4 + 1;
         }
 
-        return res;
+        return res < 0 ? res + 4 : res;
     }
 
     public static int getStartPointR(int point, int d, int n){
@@ -71,7 +71,6 @@ public class Main {
         int cnt = -1;
 
         do{
-            System.out.printf("%d %d\n", direction);
             r += dr[direction];
             c += dc[direction];
             
