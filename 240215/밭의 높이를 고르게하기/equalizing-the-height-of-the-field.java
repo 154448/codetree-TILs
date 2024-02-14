@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,14 +18,18 @@ public class Main {
             cost[i] = Math.abs(tmp - h);
         }
 
-        Arrays.sort(cost);
+        int minSum = 300;
 
-        int sum = 0;
+        for(int s = 0; s <= n - t; s++){
+            int sum = 0;
 
-        for(int i = 0; i < t; i++){
-            sum += cost[i];
+            for(int i = 0; i < t; i++){
+                sum += cost[s + i];
+            }
+
+            minSum = Math.min(sum, minSum);
         }
 
-        System.out.printf("%d", sum);
+        System.out.printf("%d", minSum);
     }
 }
