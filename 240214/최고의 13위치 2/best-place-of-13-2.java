@@ -21,36 +21,38 @@ public class Main {
 
         for(int r = 0; r < n; r++){
             int tmpM = 0;
-            
             int tmpC = 0;
 
             for(int c = 0; c < n - 2; c++){
                 int tmp = plane[r][c] + plane[r][c + 1] + plane[r][c + 2];
-                if(tmp > tmpM){
+                if(tmp >= tmpM){
                     tmpM = tmp;
                     tmpC = c;
                 }
             }
+            maxSum[r] = tmpM;
 
             int secondM = 0;
-
+            //System.out.printf("%d %d\n", r, tmpC);
             for(int c = 0; c < n - 2; c++){
                 int tmp = 0;
+
                 for(int k = 0; k < 3; k++){
                     int tC = c + k;
                     
-                    if(tC >= tmpC || tC <= (tmpC + 2)){
+                    if(tC == tmpC || tC == (tmpC + 2) || tmpC == (tmpC + 1)){
+                        //System.out.printf("%d %d\n", r, c);
                         tmp = 0;
                         break;
                     }
                     else{
-                        tmp += plane[r][c];
+                        tmp += plane[r][tC];
                     }
                 }
+
                 secondM = Math.max(secondM, tmp);
             }
-
-            maxSum[r] = tmpM;
+            //System.out.printf("%d \n", secondM);
             rowMax[r] = tmpM + secondM;
         }
 
@@ -58,7 +60,7 @@ public class Main {
         Arrays.sort(maxSum);
         Arrays.sort(rowMax);
 
-        System.out.printf("%d", maxSum[n - 1] + maxSum[n - 2] > rowMax[n - 1] ? maxSum[n - 1] + maxSum[n - 2] : rowMax[n -1]);
+        System.out.printf("%d", maxSum[n - 1] + maxSum[n - 2] > rowMax[n - 1] ? maxSum[n - 1] + maxSum[n - 2] : rowMax[n - 1]);
 
 
     }
