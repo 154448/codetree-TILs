@@ -16,7 +16,7 @@ public class Main {
 
         int maxSum = 0;
 
-        for(int i = 0; i < n - s; i++){
+        for(int i = 0; i < n - s + 1; i++){
             int sum = 0;
 
             for(int j = 0; j < s; j++){
