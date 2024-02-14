@@ -13,7 +13,7 @@ public class Main {
             nums[i] = userIn.nextInt();
         }
 
-        int maxSum = 9;
+        int maxSum = -1;
 
         for(int i = 0; i < n - 2; i++){
             for(int j = i + 1; j < n - 2; j++){
