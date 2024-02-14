@@ -8,7 +8,7 @@ public class Main {
         int n = userIn.nextInt();
         int k = userIn.nextInt();
 
-        int[] candy = new int[100];
+        int[] candy = new int[101];
 
         int maxSum = 0;
 
