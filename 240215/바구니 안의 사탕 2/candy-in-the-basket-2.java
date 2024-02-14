@@ -8,18 +8,18 @@ public class Main {
         int n = userIn.nextInt();
         int k = userIn.nextInt();
 
-        int[] candy = new int[101];
+        int[] candy = new int[501];
 
         int maxSum = 0;
 
         for(int i = 0; i < n; i++){
             int c = userIn.nextInt();
-            int idx = userIn.nextInt();
+            int idx = userIn.nextInt() + 200;
 
             candy[idx] += c;
         }
 
-        for(int i = k; i < 100 - k; i++){
+        for(int i = k; i < 301 - k; i++){
             int sum = 0;
             sum += candy[i];
             for(int j = 1; j <= k; j++){
