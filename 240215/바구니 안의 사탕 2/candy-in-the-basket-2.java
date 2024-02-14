@@ -19,7 +19,7 @@ public class Main {
             candy[idx] += c;
         }
 
-        for(int i = k; i < 301 - k; i++){
+        for(int i = k; i < 501 - k; i++){
             int sum = 0;
             sum += candy[i];
             for(int j = 1; j <= k; j++){
