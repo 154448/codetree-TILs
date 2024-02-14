@@ -16,7 +16,7 @@ public class Main {
             int c = userIn.nextInt();
             int idx = userIn.nextInt();
 
-            candy[idx] = c;
+            candy[idx] += c;
         }
 
         for(int i = k; i < 100 - k; i++){
