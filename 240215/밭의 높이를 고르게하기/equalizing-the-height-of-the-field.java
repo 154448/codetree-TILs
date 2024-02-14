@@ -18,7 +18,7 @@ public class Main {
             cost[i] = Math.abs(tmp - h);
         }
 
-        int minSum = 300;
+        int minSum = 100000;
 
         for(int s = 0; s <= n - t; s++){
             int sum = 0;
