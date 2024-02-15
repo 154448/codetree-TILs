@@ -21,7 +21,7 @@ public class Main {
                     int[] tmp = {i, j, k};
 
                     for(int idx = 0; idx < 3; idx++){
-                        int diff = tmp[idx] - num[idx];
+                        int diff = Math.abs(tmp[idx] - num[idx]);
 
                         if(diff <= 2){
                             cnt += 1;
