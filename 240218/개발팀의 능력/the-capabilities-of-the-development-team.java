@@ -48,7 +48,7 @@ public class Main {
 
         //s : 한 명인 팀
         for(int s = 0; s < 5; s++){
-            for(int i = 0; i < 4; i++){
+            for(int i = 0; i < 5; i++){
                 if(i == s){
                     continue;
                 }
@@ -77,6 +77,6 @@ public class Main {
 
         }
 
-        System.out.printf("%d", diff == 5000 ? -1 : diff);
+        System.out.printf("%d", diff == Integer.MAX_VALUE ? -1 : diff);
     }
 }
