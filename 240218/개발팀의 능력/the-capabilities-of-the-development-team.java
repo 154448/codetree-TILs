@@ -59,7 +59,7 @@ public class Main {
                         }
                         else{
                             int team = ability[i] + ability[j];
-                            int[] teamAbility = {s, team, tot - s - team};
+                            int[] teamAbility = {ability[s], team, tot - ability[s] - team};
 
                             if(isDuplicate(teamAbility)){
                                 continue;
