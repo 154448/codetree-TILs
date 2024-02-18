@@ -21,7 +21,7 @@ public class Main {
 
     public static int findDiff(int[] arr){
         int max = 0;
-        int min = 1000;
+        int min = Integer.MAX_VALUE;
 
         for(int i = 0; i < arr.length; i++){
             max = Math.max(max, arr[i]);
