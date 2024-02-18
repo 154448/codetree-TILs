@@ -6,7 +6,7 @@ public class Main {
 
         boolean res = false;
 
-        for(int i = 0; i < n - 1; i++){
+        for(int i = 0; i < n; i++){
             for(int j = i + 1; j < n; j++){
                 if(arr[i] == arr[j]){
                     res = true;
@@ -37,7 +37,7 @@ public class Main {
         int[] ability = new int[5];
         int tot = 0;
 
-        int diff = 5000;
+        int diff = Integer.MAX_VALUE;
 
         for(int i = 0; i < 5; i++){
             int now = userIn.nextInt();
