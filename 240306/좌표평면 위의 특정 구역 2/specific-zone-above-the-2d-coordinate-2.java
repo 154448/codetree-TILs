@@ -24,7 +24,7 @@ public class Main {
             y[yPoint] = 1;
         }
 
-        int minValue = 160000;
+        int minValue = 1600000000;
 
         for(int i = 0; i < n; i++){
             int[] xTmp = x.clone();
