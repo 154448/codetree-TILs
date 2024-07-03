@@ -38,15 +38,16 @@ public class Main {
                     if(userRecord[who][i] < when){
                         state[i] = 1;
                     }
-                    else if(userRecord[who][i] > when){
-                        state[i] = 0;
-                    }
                 }
             }
+        }
 
-            for(int i = 1; i <= m; i++){
-                if(userRecord[who][i] == 0){
-                    state[i] = 0;
+        for(int i = 1; i <= n; i++){
+            if(checkState[i] == 1){
+                for(int j = 1; j <= m; j++){
+                    if(userRecord[i][j] == 0){
+                        state[j] = 0;
+                    }
                 }
             }
         }
