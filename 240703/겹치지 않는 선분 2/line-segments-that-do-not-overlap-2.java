@@ -21,17 +21,20 @@ public class Main {
             int temp = 0;
 
             for(int j = 0; j < n; j++){
+                if(j == i){
+                    continue;
+                }
                 //low가 큰 경우
                 if(low[i] < low[j]){
                     //high는 작은 경우
-                    if(high[i] > high[j]){
+                    if(high[i] >= high[j]){
                         temp += 1;
                     }
                 }
                 //low가 작은 경우
                 else{
                     //high가 큰 경우
-                    if(high[j] > high[i]){
+                    if(high[j] >= high[i]){
                         temp += 1;
                     }
                 }
