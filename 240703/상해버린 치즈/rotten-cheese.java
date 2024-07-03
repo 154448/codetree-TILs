@@ -29,7 +29,7 @@ public class Main {
         //맛탱이간 치즈 기록
         for(int k = 0; k < s; k++){
             int who = userIn.nextInt();
-            int when = userIn.nextInt() - 1;
+            int when = userIn.nextInt();
 
             checkState[who] = 1;
 
@@ -43,7 +43,17 @@ public class Main {
                     }
                 }
             }
+
+            for(int i = 1; i <= m; i++){
+                if(userRecord[who][i] == 0){
+                    state[i] = 0;
+                }
+            }
         }
+
+        // for(int i = 1; i <= m; i++){
+        //     System.out.printf("%d ", state[i]);
+        // }
 
         for(int i = 1; i <= n; i++){
             if(checkState[i] == 1){
@@ -52,7 +62,7 @@ public class Main {
             else{
                 int[] temp = userRecord[i];
 
-                for(int j = 1; j < n; j++){
+                for(int j = 1; j <= m; j++){
                     if((state[j] == 1) && (temp[j] != 0)){
                         s += 1;
                         break;
