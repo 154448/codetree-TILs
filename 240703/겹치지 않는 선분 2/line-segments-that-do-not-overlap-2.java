@@ -24,23 +24,16 @@ public class Main {
                 if(j == i){
                     continue;
                 }
-                //low가 큰 경우
-                if(low[i] < low[j]){
-                    //high는 작은 경우
-                    if(high[i] >= high[j]){
-                        temp += 1;
-                    }
-                }
-                //low가 작은 경우
-                else{
-                    //high가 큰 경우
-                    if(high[j] >= high[i]){
-                        temp += 1;
-                    }
-                }
-            }
+                int res = (low[i] - low[j]) * (high[i] * high[j]);
 
-            cnt += (temp == 0 ? 0 : 1);
+                temp += ((res < 0) ? 1 : 0);
+
+                
+            }
+            
+            if(temp == 0){
+                cnt += 1;
+            }
         }
 
         System.out.printf("%d", cnt);
