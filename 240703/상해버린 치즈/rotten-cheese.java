@@ -56,23 +56,21 @@ public class Main {
         //     System.out.printf("%d ", state[i]);
         // }
 
-        for(int i = 1; i <= n; i++){
-            if(checkState[i] == 1){
-                continue;
-            }
-            else{
-                int[] temp = userRecord[i];
+        System.out.println();
 
-                for(int j = 1; j <= m; j++){
-                    if((state[j] == 1) && (temp[j] != 0)){
-                        s += 1;
-                        break;
-                    }
+        int cnt = 0;
+        for(int i = 1; i <= m; i++){
+            if(state[i] == 1){
+                int temp = 0;
+                for(int j = 1; j <= n; j++){
+                    temp += ((userRecord[j][i] != 0)? 1 : 0);
                 }
+
+                cnt = Math.max(cnt, temp);
             }
         }
 
-        System.out.printf("%d", s);
+        System.out.printf("%d", cnt);
 
 
     }
