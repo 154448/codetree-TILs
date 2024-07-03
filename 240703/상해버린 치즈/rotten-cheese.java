@@ -56,7 +56,7 @@ public class Main {
         //     System.out.printf("%d ", state[i]);
         // }
 
-        System.out.println();
+        //System.out.println();
 
         int cnt = 0;
         for(int i = 1; i <= m; i++){
