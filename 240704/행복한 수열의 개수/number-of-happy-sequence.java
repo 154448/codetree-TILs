@@ -24,13 +24,13 @@ public class Main {
             int targetR = numsR[i][0];
             int targetC = numsC[i][0];
 
-            int cntR = 1;
-            int cntC = 1;
+            int cntR = 0;
+            int cntC = 0;
 
-            for(int j = 1; j < n; j++){
+            for(int j = 0; j < n; j++){
                 if(numsR[i][j] == targetR){
                     cntR++;
-                    if(cntR == m){
+                    if(cntR >= m){
                         cnt++;
                         break;
                     }
@@ -41,10 +41,10 @@ public class Main {
                 }
             }
 
-            for(int j = 1; j < n; j++){
+            for(int j = 0; j < n; j++){
                 if(numsC[i][j] == targetC){
                     cntC++;
-                    if(cntC == m){
+                    if(cntC >= m){
                         cnt++;
                         break;
                     }
