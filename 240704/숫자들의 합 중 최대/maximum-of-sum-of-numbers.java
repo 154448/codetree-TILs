@@ -11,11 +11,16 @@ public class Main {
 
         for(int i = start; i <= end; i++){
             int tot = 0;
-            tot += (i / 10000);
-            tot += (i / 1000);
-            tot += (i / 100);
-            tot += (i / 10);
-            tot += (i % 10);
+            int now = i;
+
+            tot += (now / 10000);
+            now = now % 10000;
+            tot += (now / 1000);
+            now = now % 1000;
+            tot += (now / 100);
+            now = now % 100;
+            tot += (now / 10);
+            tot += (now % 10);
 
             // System.out.println(tot);
 
