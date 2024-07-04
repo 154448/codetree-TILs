@@ -18,7 +18,7 @@ public class Main {
         for(int i = 0; i < n - 1; i++){
             int target = bomb[i];
 
-            int end = ((i + 4) < n)? i + 4 : n;
+            int end = ((i + k + 1) < n)? i + k + 1 : n;
 
             for(int j = i + 1; j < end; j++){
                 if(target == bomb[j]){
