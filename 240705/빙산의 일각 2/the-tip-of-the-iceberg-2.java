@@ -29,17 +29,22 @@ public class Main {
                 temp[j] -= i;
             }
 
+            // for(int k =0; k< n; k++){
+            // System.out.printf("%d ", temp[k]);
+            // }
+            // System.out.println();
+
             int count = 0;
             boolean isZero = true;
 
             for(int j = 0; j < n; j++){
                 //현재 0이 아님 직전 0 -> 새로운 빙하 등장
-                if((temp[j] != 0) && (isZero)){
-                    // System.out.printf("//%d//", j);
+                if((temp[j] > 0) && (isZero)){
+                    // System.out.printf("/%d/", j);
                     count++;
                 }
 
-                isZero = (temp[j] == 0)? true : false;
+                isZero = (temp[j] <= 0)? true : false;
             }
 
             // System.out.println(count);
