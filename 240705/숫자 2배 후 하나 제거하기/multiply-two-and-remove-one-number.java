@@ -14,19 +14,22 @@ public class Main {
 
         int minDiffSum = Integer.MAX_VALUE;
 
-
         for(int i = 1; i <= n; i++){
-            int[] temp = nums.clone();
+            int[] tmp = nums.clone();
 
-            temp[i] = temp[i] * 2;
-            temp[0] = temp[2];
-
-            int diffSum = 0;
+            tmp[i] = tmp[i] * 2;
+            tmp[0] = tmp[2];
+            
             for(int j = 1; j <= n; j++){
+                int[] temp = tmp.clone();
+                //삭제 수행
                 temp[j] = temp[j - 1];
+                //차이 합 구하기
+                int diffSum = 0;
                 for(int k = 2; k <= n; k++){
                     diffSum += Math.abs(temp[k] - temp[k - 1]);
                 }
+                //최솟값 찾기
                 minDiffSum = Math.min(minDiffSum, diffSum);
             }
         }
