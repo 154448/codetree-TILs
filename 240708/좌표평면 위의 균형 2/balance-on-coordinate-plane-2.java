@@ -19,21 +19,21 @@ public class Main {
 
         int minPoint = 100;
 
-        for(int i = 0; i < 100; i++){
-            for(int j = 0;j < 100; j++){
+        for(int i = 0; i <= 100; i++){
+            for(int j = 0;j <= 100; j++){
                 int[] cntPoint = new int[4];
 
                 for(int p = 0; p < n; p++){
                     if((x[p] <= i) && (y[p] >= j)){
                         cntPoint[0]++;
                     }
-                    else if((x[p] >= i) && (y[p] >= j)){
+                    if((x[p] >= i) && (y[p] >= j)){
                         cntPoint[1]++;
                     }
-                    else if((x[p] >= i) && (y[p] <= j)){
+                    if((x[p] >= i) && (y[p] <= j)){
                         cntPoint[2]++;
                     }
-                    else if((x[p] <= i) && (y[p] <= j)){
+                    if((x[p] <= i) && (y[p] <= j)){
                         cntPoint[3]++;
                     }
                 }
