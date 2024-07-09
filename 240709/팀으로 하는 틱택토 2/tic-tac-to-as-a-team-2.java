@@ -6,6 +6,8 @@ public class Main {
 
         int[][] nums = new int[3][3];
 
+        int[][] res = new int[10][10];
+
         for(int i = 0; i < 3; i++){
             int now = userIn.nextInt();
             nums[i][0] = now / 100;
@@ -13,8 +15,6 @@ public class Main {
             nums[i][2] = now % 10;
         }
     
-
-        int cnt = 0;
         //가로열 확인
         for(int i = 0; i < 3; i++){
             int[] point = new int[10];
@@ -24,19 +24,23 @@ public class Main {
             point[nums[i][2]] += 1;
 
             boolean isOne = false;
+            int one = 0;
             boolean isTwo = false;
+            int two = 0;
 
             for(int j = 1; j <= 9; j++){
                 if(point[j] == 1){
                     isOne = true;
+                    one = j;
                 }
                 if(point[j] == 2){
                     isTwo = true;
+                    two = j;
                 }
             }
 
             if(isOne && isTwo){
-                cnt += 1;
+                res[one][two] += 1;
             }
         }
         //세로열 확인
@@ -48,19 +52,23 @@ public class Main {
             point[nums[2][i]] += 1;
 
             boolean isOne = false;
+            int one = 0;
             boolean isTwo = false;
+            int two = 0;
 
             for(int j = 1; j <= 9; j++){
                 if(point[j] == 1){
                     isOne = true;
+                    one = j;
                 }
                 if(point[j] == 2){
                     isTwo = true;
+                    two = j;
                 }
             }
 
             if(isOne && isTwo){
-                cnt += 1;
+                res[one][two] += 1;
             }
         }
 
@@ -72,20 +80,31 @@ public class Main {
             point[nums[(i == 0)? 2 : 0][2]] += 1;
 
             boolean isOne = false;
+            int one = 0;
             boolean isTwo = false;
+            int two = 0;
 
             for(int j = 1; j <= 9; j++){
                 if(point[j] == 1){
                     isOne = true;
+                    one = j;
                 }
                 if(point[j] == 2){
                     isTwo = true;
+                    two = j;
                 }
             }
-        
 
             if(isOne && isTwo){
-                cnt += 1;
+                res[one][two] += 1;
+            }
+        }
+
+        int cnt = 0;
+
+        for(int i = 1; i < 10; i++){
+            for(int j = 1; j < 10; j++){
+                cnt += (res[i][j] != 0) ? 1 : 0; 
             }
         }
 
