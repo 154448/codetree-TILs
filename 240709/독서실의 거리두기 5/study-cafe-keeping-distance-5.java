@@ -19,7 +19,9 @@ public class Main {
                 char[] tmp = user.clone();
                 tmp[i] = '1';
 
-                int minDist = 100;
+                int minDist = n;
+
+                boolean isRight = true;
 
                 boolean isExit = false;
                 int lastIdx = -1;
@@ -28,10 +30,11 @@ public class Main {
                     if(tmp[j] == '1'){
                         if(isExit){
                             if(j - lastIdx == 1){
-                                continue;
+                                isRight = false;
+                                break;
                             }
                             else{
-                                minDist = Math.min(minDist, j - lastIdx - 1);
+                                minDist = Math.min(minDist, j - lastIdx);
                             }
                         }
                         else{
@@ -40,8 +43,9 @@ public class Main {
                         lastIdx = j;
                     }
                 }
-
-                maxDist = Math.max(minDist, maxDist);
+                if(isRight){
+                    maxDist = Math.max(minDist, maxDist);
+                }
 
             }
         }
