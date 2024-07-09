@@ -29,13 +29,7 @@ public class Main {
                 for(int j = 0; j < n; j++){
                     if(tmp[j] == '1'){
                         if(isExit){
-                            if(j - lastIdx == 1){
-                                isRight = false;
-                                break;
-                            }
-                            else{
-                                minDist = Math.min(minDist, j - lastIdx);
-                            }
+                            minDist = Math.min(minDist, j - lastIdx);
                         }
                         else{
                             isExit = true;
