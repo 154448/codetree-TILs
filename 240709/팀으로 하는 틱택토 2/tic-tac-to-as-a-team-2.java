@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner userIn = new Scanner(System.in);
+
+        int[][] nums = new int[3][3];
+
+        for(int i = 0; i < 3; i++){
+            int now = userIn.nextInt();
+            nums[i][0] = now / 100;
+            nums[i][1] = (now % 100) / 10;
+            nums[i][2] = now % 10;
+        }
+    
+
+        int cnt = 0;
+        //가로열 확인
+        for(int i = 0; i < 3; i++){
+            int[] point = new int[10];
+
+            point[nums[i][0]] += 1;
+            point[nums[i][1]] += 1;
+            point[nums[i][2]] += 1;
+
+            boolean isOne = false;
+            boolean isTwo = false;
+
+            for(int j = 1; j <= 9; j++){
+                if(point[j] == 1){
+                    isOne = true;
+                }
+                if(point[j] == 2){
+                    isTwo = true;
+                }
+            }
+
+            if(isOne && isTwo){
+                cnt += 1;
+            }
+        }
+        //세로열 확인
+        for(int i = 0; i < 3; i++){
+            int[] point = new int[10];
+
+            point[nums[0][i]] += 1;
+            point[nums[1][i]] += 1;
+            point[nums[2][i]] += 1;
+
+            boolean isOne = false;
+            boolean isTwo = false;
+
+            for(int j = 1; j <= 9; j++){
+                if(point[j] == 1){
+                    isOne = true;
+                }
+                if(point[j] == 2){
+                    isTwo = true;
+                }
+            }
+
+            if(isOne && isTwo){
+                cnt += 1;
+            }
+        }
+
+        for(int i = 0; i < 2; i++){
+            int[] point = new int[10];
+
+            point[nums[(i == 0)? 0 : 2][0]] += 1;
+            point[nums[1][1]] += 1;
+            point[nums[(i == 0)? 2 : 0][2]] += 1;
+
+            boolean isOne = false;
+            boolean isTwo = false;
+
+            for(int j = 1; j <= 9; j++){
+                if(point[j] == 1){
+                    isOne = true;
+                }
+                if(point[j] == 2){
+                    isTwo = true;
+                }
+            }
+        
+
+            if(isOne && isTwo){
+                cnt += 1;
+            }
+        }
+
+        System.out.printf("%d", cnt);
+
+        
+
+
+
+    }
+}
