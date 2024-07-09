@@ -25,29 +25,28 @@ public class Main {
                 int lastIdx = -1;
 
                 for(int j = 0; j < n; j++){
-                    if(tmp[i] == '1'){
+                    if(tmp[j] == '1'){
                         if(isExit){
                             if(j - lastIdx == 1){
                                 continue;
                             }
                             else{
-                                minDist = Math.min(minDist, j - lastIdx);
-                                lastIdx = j;
+                                minDist = Math.min(minDist, j - lastIdx - 1);
                             }
                         }
                         else{
                             isExit = true;
-                            lastIdx = j;
                         }
+                        lastIdx = j;
                     }
                 }
 
                 maxDist = Math.max(minDist, maxDist);
+
             }
         }
 
         System.out.printf("%d", maxDist);
-
 
     }
 }
