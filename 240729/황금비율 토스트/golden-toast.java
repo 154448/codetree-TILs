@@ -15,7 +15,7 @@ public class Main {
 
         String str = userIn.next();
 
-        for(int i = 0; i < m; i++){
+        for(int i = 0; i < str.length(); i++){
             list.add(str.charAt(i));
         }
 
