@@ -35,8 +35,10 @@ public class Main {
                 }
             }
             else if(command == 'D'){
-                it.next();
-                it.remove();
+                if(it.hasNext()){
+                    it.next();
+                    it.remove();
+                }
             }
             else if(command == 'P'){
                 char num = userIn.next().charAt(0);
