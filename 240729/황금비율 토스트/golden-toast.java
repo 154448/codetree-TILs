@@ -15,13 +15,13 @@ public class Main {
 
         String str = userIn.next();
 
-        for(int i = 0; i < str.length(); i++){
+        for(int i = 0; i < n; i++){
             list.add(str.charAt(i));
         }
 
         it = list.listIterator(list.size());
 
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < m; i++){
             char command = userIn.next().charAt(0);
 
             if(command == 'L'){
