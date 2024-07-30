@@ -12,11 +12,10 @@ public class Main {
         for(int i = 0; i < n; i++){
             nums[i] = userIn.nextInt();
         }
-
-        int minIdx = 0;
         
         //제일 작은 수부터 그 다음으로 작은 수를 차근 차근 찾음
         for(int i = 0; i < n; i++){
+            int minIdx = i;
             for(int j = i; j < n; j++){
                 if(nums[j] < nums[minIdx]){
                     minIdx = j;
@@ -26,8 +25,6 @@ public class Main {
             int tmp = nums[i];
             nums[i] = nums[minIdx];
             nums[minIdx] = tmp;
-
-            minIdx += 1;
         }
 
         for(int i = 0; i < n; i++){
