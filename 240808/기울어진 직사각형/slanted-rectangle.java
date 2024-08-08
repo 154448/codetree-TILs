@@ -20,8 +20,8 @@ public class Main {
         int[] dr = {-1, -1, 1, 1};
         int[] dc = {1, -1, -1, 1};
 
-        for(int r = 2; r < n; r++){
-            for(int c = 1; c < n - 1; c++){
+        for(int r = 0; r < n; r++){
+            for(int c = 0; c < n; c++){
 
                 int cr = r;
                 int cc = c;
@@ -47,7 +47,7 @@ public class Main {
                         }
                         catch(ArrayIndexOutOfBoundsException e){
                             continue;
-                        }
+                        }  
                     }
                 }
             }
