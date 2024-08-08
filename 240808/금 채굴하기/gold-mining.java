@@ -23,13 +23,15 @@ public class Main {
         }
 
         int maxCount = 0;
-
+        boolean isRight = false;
         int k = -1;
 
         do{
             k += 1;
 
             int cost = 2 * (k * k + k) + 1;
+
+            isRight = false;
 
             for(int x = 0; x < n; x++){
                 for(int y = 0; y < n; y++){
@@ -40,20 +42,20 @@ public class Main {
                         int start = y - (k - i);
                         int end = y + (k - i);
 
-                        try{
-                            for(int c = start; c <= end; c++){
+                        for(int c = start; c <= end; c++){
+                            try{
                                 sum += gold[x + i][c];
+                            }catch(ArrayIndexOutOfBoundsException e){
+                                sum += 0;
                             }
-                        }catch(ArrayIndexOutOfBoundsException e){
-                            sum += 0;
                         }
 
-                        try{
-                            for(int c = start; c <= end; c++){
+                        for(int c = start; c <= end; c++){
+                            try{
                                 sum += gold[x - i][c];
+                            }catch(ArrayIndexOutOfBoundsException e){
+                                sum += 0;
                             }
-                        }catch(ArrayIndexOutOfBoundsException e){
-                            sum += 0;
                         }
                         
 
@@ -63,11 +65,12 @@ public class Main {
                     }
 
                     if(sum * m >= cost){
+                        isRight = true;
                         maxCount = Math.max(maxCount, sum);
                     }
                 }
             }
-        }while((2 * k + 1) < n);
+        }while(isRight);
 
         System.out.printf("%d", maxCount);
 
