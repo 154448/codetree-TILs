@@ -20,16 +20,16 @@ public class Main {
         int[] dr = {-1, -1, 1, 1};
         int[] dc = {1, -1, -1, 1};
 
-        for(int r = 0; r < n; r++){
-            for(int c = 0; c < n; c++){
-
-                int cr = r;
-                int cc = c;
+        for(int r = 2; r < n ; r++){
+            for(int c = 1; c < n - 1; c++){
 
                 for(int w = 1; w < n; w++){
                     for(int h = 1; h < n; h++){
 
                         int sum = 0;
+
+                        int cr = r;
+                        int cc = c;
 
                         try{
                             for(int i = 0; i < 4; i++){
@@ -37,9 +37,10 @@ public class Main {
                                 int end = (i % 2 == 0) ? w : h;
                                 
                                 for(int k = 0; k < end; k++){
-                                        sum += nums[cr][cc];
                                         cr += dr[i];
                                         cc += dc[i];
+                                        sum += nums[cr][cc];
+                                        
                                 }
                             }
 
